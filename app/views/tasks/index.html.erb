@@ -7,21 +7,21 @@
         <th>id</th>
         <th>ステータス</th>
         <th>タスク</th>
-　　　</tr>
-　　</thead>
-　　<tbody>
-　　  <% @tasks.each do |task| %>
-　　    <tr>
-　　      <td><%= link_to task.id, task %></td>
-　　      <td><%= task.status %></td>
-　　      <td><%= task.content %></td>
-　　    </tr>
-　　  <% end %>
-　　</tbody>
-　</table>
-　<div>
-　  <%== pagy_bootstrap_nav(@pagy) %>
-　</div>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tasks.each do |task| %>
+        <tr>
+          <td><%= link_to task.id, task %></td>
+          <td><%= task.status %></td>
+          <td><%= task.content %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div>
+    <%== pagy_bootstrap_nav(@pagy) %>
+  </div>
 <% end %>
 
 <%= link_to '新規タスクの作成', new_task_path, class: "btn btn-primary" %>
